@@ -12,7 +12,9 @@ app.use(express.json());
 
 // Usar las rutas de usuarios
 app.use("/api/users", userRoutes);
-
+app.get("/", (req, res) => {
+  return res.send("API TAREA DE INVESTIGACION");
+});
 // Configuración del puerto
 const PORT = process.env.PORT || 5000;
 
